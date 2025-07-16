@@ -30,110 +30,7 @@
 
 <body class="bg-gray-50">
   <!-- NAVBAR PRINCIPAL -->
-  <nav class="bg-white shadow-lg border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <!-- Logo y nombre de la empresa -->
-        <div class="flex items-center">
-          <a href="https://www.ds3comunicaciones.com/index.html" class="flex items-center">
-            <img src="http://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg" alt="NetPeru Logo" class="h-10 w-auto mr-3" />
-            <span class="text-xl font-bold text-gray-900">DS3 Comunicaciones</span>
-          </a>
-        </div>
-
-        <!-- Información de contacto central -->
-        <div class="hidden md:flex items-center space-x-4">
-          <!-- Teléfonos en línea compacta -->
-          <div class="flex items-center space-x-3">
-            <div class="flex items-center space-x-1">
-              <i class="fas fa-phone text-blue-600"></i>
-              <span class="text-sm text-gray-700">533-4339</span>
-            </div>
-            <div class="flex items-center space-x-1">
-              <i class="fas fa-mobile-alt text-green-600"></i>
-              <span class="text-sm text-gray-700">994-428-965</span>
-            </div>
-            <div class="flex items-center space-x-1">
-              <i class="fas fa-mobile-alt text-green-600"></i>
-              <span class="text-sm text-gray-700">996-533-223</span>
-            </div>
-            <div class="flex items-center">
-                <i class="fas fa-mobile-alt text-green-600 mr-2"></i>
-                <span class="text-sm text-gray-700">99653-3223</span>
-            </div>
-          </div>
-
-          <!-- Email -->
-          <div class="flex items-center space-x-1">
-            <i class="fas fa-envelope text-red-600"></i>
-            <a href="mailto:netperu100@hotmail.com" class="text-sm text-gray-700 hover:text-blue-600">netperu100@hotmail.com</a>
-          </div>
-        </div>
-
-        <!-- Barra de búsqueda -->
-        <div class="hidden lg:flex items-center">
-          <div class="relative">
-            <input type="text" 
-                   placeholder="Buscar productos..." 
-                   class="w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-sm">
-            <div class="absolute left-3 top-1/2 transform -translate-y-1/2">
-              <i class="fas fa-search text-gray-400"></i>
-            </div>
-          </div>
-        </div>
-
-        <!-- Menú móvil -->
-        <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none">
-            <i class="fas fa-bars text-xl"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Menú móvil desplegable -->
-      <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200 py-4">
-        <div class="space-y-3">
-          <!-- Teléfonos móvil -->
-          <div class="space-y-2">
-            <div class="flex items-center">
-              <i class="fas fa-phone text-blue-600 mr-2"></i>
-              <span class="text-sm text-gray-700">533-4339</span>
-            </div>
-            <div class="flex items-center">
-              <i class="fas fa-mobile-alt text-green-600 mr-2"></i>
-              <span class="text-sm text-gray-700">994-428-965</span>
-            </div>
-            <div class="flex items-center">
-              <i class="fas fa-mobile-alt text-green-600 mr-2"></i>
-              <span class="text-sm text-gray-700">996-533-223</span>
-            </div>
-            <div class="flex items-center">
-                <i class="fas fa-mobile-alt text-green-600 mr-2"></i>
-                <span class="text-sm text-gray-700">99653-3223</span>
-            </div>
-          </div>
-
-          <!-- Email móvil -->
-          <div class="flex items-center">
-            <i class="fas fa-envelope text-red-600 mr-2"></i>
-            <a href="mailto:netperu100@hotmail.com" class="text-sm text-gray-700 hover:text-blue-600">netperu100@hotmail.com</a>
-          </div>
-
-          <!-- Búsqueda móvil -->
-          <div class="relative">
-            <input type="text" 
-                   placeholder="Buscar productos..." 
-                   class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-sm">
-            <div class="absolute left-3 top-1/2 transform -translate-y-1/2">
-              <i class="fas fa-search text-gray-400"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-
+  <div id="navbar-container"></div>
 
   <!-- SUBMENU DE MARCA DEPENDIENDO DEL PRODUCTO -->
   <nav class="bg-white border-b border-gray-200 shadow-sm">
@@ -1208,26 +1105,6 @@
     document.addEventListener('keydown', function(event) {
       if (event.key === 'Escape') {
         closeModal();
-      }
-    });
-
-    // Menú móvil
-    document.addEventListener('DOMContentLoaded', function() {
-      const mobileMenuButton = document.getElementById('mobile-menu-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-      
-      if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', function() {
-          mobileMenu.classList.toggle('hidden');
-          
-          // Cambiar ícono del botón
-          const icon = mobileMenuButton.querySelector('i');
-          if (mobileMenu.classList.contains('hidden')) {
-            icon.className = 'fas fa-bars text-xl';
-          } else {
-            icon.className = 'fas fa-times text-xl';
-          }
-        });
       }
     });
   </script>
